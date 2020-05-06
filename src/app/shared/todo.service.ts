@@ -45,4 +45,8 @@ export class TodoService {
   removeTodo(id: number) {
     this.todo = this.todo.filter((t) => t.id !== id);
   }
+
+  addTodo(todo: Todo) {
+    this.todo.push(todo);
+  }
 }
