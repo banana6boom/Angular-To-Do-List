@@ -6,9 +6,10 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { ToDoComponent } from "./to-do/to-do.component";
 import { ToDoFormComponent } from "./to-do-form/to-do-form.component";
+import { TodoFilterPipe } from './shared/todo-filter.pipe';
 
 @NgModule({
-  declarations: [AppComponent, ToDoComponent, ToDoFormComponent],
+  declarations: [AppComponent, ToDoComponent, ToDoFormComponent, TodoFilterPipe],
   imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

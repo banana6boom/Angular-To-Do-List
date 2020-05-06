@@ -11,6 +11,7 @@ import { delay } from "rxjs/operators";
 export class ToDoComponent implements OnInit {
   constructor(public todoService: TodoService) {}
   public loading = true;
+  public searchString = "";
 
   public todo: Todo[] = [];
 

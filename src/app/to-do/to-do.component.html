@@ -1,6 +1,22 @@
 <div *ngIf="!loading">
+  <div class="filter">
+    <div class="control">
+      <input
+        class="input"
+        type="text"
+        placeholder="Filter ToDo"
+        [(ngModel)]="searchString"
+      />
+    </div>
+  </div>
   <ul *ngIf="todoService.todo.length; else noTodo">
-    <li class="box" *ngFor="let item of todoService.todo; let i = index">
+    <li
+      class="box"
+      *ngFor="
+        let item of todoService.todo | todoFilter: searchString;
+        let i = index
+      "
+    >
       <div class="columns is-vcentered">
         <div class="column is-1 has-text-centered">
           <input
@@ -19,7 +35,7 @@
           {{ item.title }}
         </div>
         <div class="column is-2 has-text-centered">
-          <small>{{ item.date | date: "medium" }}</small>
+          <small>{{ item.date | date: "short" }}</small>
         </div>
         <div class="column is-2 has-text-centered">
           <button
