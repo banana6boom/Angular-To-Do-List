@@ -1,11 +1,11 @@
-import { Pipe, PipeTransform } from "@angular/core";
-import { Todo } from "../models/Todo.interface";
+import { Pipe, PipeTransform } from '@angular/core';
+import { Todo } from '../models/todo.interface';
 
 @Pipe({
-  name: "todoFilter",
+  name: 'todoFilter',
 })
 export class TodoFilterPipe implements PipeTransform {
-  transform(todo: Todo[], search: string = ""): Todo[] {
+  transform(todo: Todo[], search: string = ''): Todo[] {
     if (!search.trim()) {
       return todo;
     }

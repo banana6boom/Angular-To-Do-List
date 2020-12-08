@@ -1,3 +1,36 @@
-h1 {
-  font-family: "Knewave", cursive;
+.navbar {
+  background-color: #39a0ed;
+}
+
+.navbar-item {
+  position: relative;
+  text-transform: uppercase;
+  color: #32323c;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.menu-item {
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: #4c6085;
+    background-color: #36f1cd;
+  }
+}
+
+.active-item {
+  color: #32323c !important;
+  background-color: #13c4a3 !important;
+}
+
+.menu-item:not(:last-child):after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 2px;
+  height: 75%;
+  content: '';
+  transform: translateY(-50%);
+  background-color: #4a4a4a;
 }

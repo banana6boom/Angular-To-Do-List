@@ -1,0 +1,30 @@
+<section>
+    <header>Organizer: <strong>{{dateService.date | async | amCalendar}}</strong>
+        <hr>
+    </header>
+    <main>
+        <ul *ngIf="tasks.length; else noTasks">
+            <li class="task" *ngFor="let task of tasks; let i = index">
+                <span><strong>{{i + 1}}</strong>{{task.title}}</span>
+                <button class="button is-danger" (click)="removeTask(task)">Remove</button>
+            </li>
+        </ul>
+        <ng-template #noTasks>
+            <p class="text">No tasks yet...</p>
+        </ng-template>
+    </main>
+    <footer>
+        <form (ngSubmit)="submit()" [formGroup]="form">
+            <div class="field has-addons">
+                <div class="control is-expanded">
+                    <input class="input" type="text" placeholder="Type text" formControlName="title" />
+                </div>
+                <div class="control">
+                    <button class="button is-primary" [disabled]="form.invalid">
+                        Add
+                    </button>
+                </div>
+            </div>
+        </form>
+    </footer>
+</section>

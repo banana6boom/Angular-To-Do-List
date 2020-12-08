@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  transition: all 0.2s;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  &:hover:not(.disabled) {
+    background-color: #eee;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  background-color: lighten(#36f1cdff, 30%);
+  span {
+    color: #32322cff;
+  }
+}
+
+.active {
+  color: red !important;
+  font-weight: 700;
+}

@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import { Todo } from "../models/Todo.interface";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { tap } from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { Todo } from '../models/todo.interface';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class TodoService {
   public todo: Todo[] = [
@@ -32,9 +32,7 @@ export class TodoService {
   constructor(private http: HttpClient) {}
 
   fetchTodo(): Observable<Todo[]> {
-    return this.http
-      .get<Todo[]>("https://jsonplaceholder.typicode.com/todos?_limit=10")
-      .pipe(tap((todo) => (this.todo = todo)));
+    return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos?_limit=6').pipe(tap((todo) => (this.todo = todo)));
   }
 
   onToggle(id: number) {

@@ -1,0 +1,24 @@
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+span {
+  width: 200px;
+  margin: 0 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+i {
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid black;
+  border-radius: 50%;
+  &:hover {
+    transition: 0.3s ease;
+    background-color: lightgray;
+  }
+}

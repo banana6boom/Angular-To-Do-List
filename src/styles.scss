@@ -1,1 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Knewave&family=Permanent+Marker&display=swap");
+/* BULMA Variables */
+$table-cell-padding: 1.2rem 0.75rem;
+$table-head-background-color: #36f1cdff;
+$table-cell-border-width: 2px !important;
+
+@import 'bulma';
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Permanent+Marker&display=swap');
+
+/* SCSS HEX PALETTE */
+$queen-blue: #4c6085ff;
+$carolina-blue: #39a0edff;
+$sea-green-crayola: #36f1cdff;
+$mountain-meadow: #13c4a3ff;
+$black-olive: #32322cff;

@@ -1,12 +1,6 @@
 <div class="field has-addons">
   <div class="control is-expanded">
-    <input
-      class="input"
-      type="text"
-      placeholder="Type ToDo text"
-      [(ngModel)]="title"
-      (keyDown.enter)="addTodo()"
-    />
+    <input class="input" type="text" placeholder="Type ToDo text" [(ngModel)]="title" (keyDown.enter)="addTodo()" />
   </div>
   <div class="control">
     <a class="button is-primary" (click)="addTodo()">

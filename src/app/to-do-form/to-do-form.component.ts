@@ -1,14 +1,14 @@
-import { Component, OnInit } from "@angular/core";
-import { Todo } from "../models/Todo.interface";
-import { TodoService } from "../shared/todo.service";
+import { Component, OnInit } from '@angular/core';
+import { Todo } from '../models/todo.interface';
+import { TodoService } from '../shared/todo.service';
 
 @Component({
-  selector: "app-to-do-form",
-  templateUrl: "./to-do-form.component.html",
-  styleUrls: ["./to-do-form.component.scss"],
+  selector: 'app-to-do-form',
+  templateUrl: './to-do-form.component.html',
+  styleUrls: ['./to-do-form.component.scss'],
 })
 export class ToDoFormComponent implements OnInit {
-  title = "";
+  title = '';
 
   constructor(private todoService: TodoService) {}
 
@@ -23,6 +23,6 @@ export class ToDoFormComponent implements OnInit {
     };
 
     this.todoService.addTodo(todo);
-    this.title = "";
+    this.title = '';
   }
 }

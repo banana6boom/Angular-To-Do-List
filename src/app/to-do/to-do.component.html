@@ -1,47 +1,29 @@
 <div *ngIf="!loading">
   <div class="filter">
     <div class="control">
-      <input
-        class="input"
-        type="text"
-        placeholder="Filter ToDo"
-        [(ngModel)]="searchString"
-      />
+      <input class="input" type="text" placeholder="Filter ToDo" [(ngModel)]="searchString" />
     </div>
   </div>
   <ul *ngIf="todoService.todo.length; else noTodo">
-    <li
-      class="box"
-      *ngFor="
+    <li class="box" *ngFor="
         let item of todoService.todo | todoFilter: searchString;
         let i = index
-      "
-    >
+      ">
       <div class="columns is-vcentered">
         <div class="column is-1 has-text-centered">
-          <input
-            type="checkbox"
-            [checked]="item.completed"
-            (change)="onChange(item.id)"
-          />
+          <input type="checkbox" [checked]="item.completed" (change)="onChange(item.id)" />
         </div>
         <div class="column is-1 has-text-centered">
           <div class="todo-num">{{ i + 1 }}</div>
         </div>
-        <div
-          class="column is-6 has-text-centered"
-          [class.done]="item.completed"
-        >
+        <div class="column is-6 has-text-centered" [class.done]="item.completed">
           {{ item.title }}
         </div>
         <div class="column is-2 has-text-centered">
           <small>{{ item.date | date: "short" }}</small>
         </div>
         <div class="column is-2 has-text-centered">
-          <button
-            class="button is-danger is-light"
-            (click)="removeTodo(item.id)"
-          >
+          <button class="button is-danger is-light" (click)="removeTodo(item.id)">
             &times;
           </button>
         </div>
@@ -51,9 +33,7 @@
 
   <ng-template #noTodo>
     <div class="box">
-      <p
-        class="is-size-3 has-text-grey-light has-text-centered is-family-sans-serif"
-      >
+      <p class="is-size-3 has-text-grey-light has-text-centered is-family-sans-serif">
         No tasks for you!
       </p>
     </div>

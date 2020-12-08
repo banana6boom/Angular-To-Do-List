@@ -1,0 +1,14 @@
+package.json
+package-lock.json
+/dist
+.angulardoc.json
+.vscode/*
+/node_modules
+tsconfig.lib.json
+tsconfig.app.json
+tsconfig.spec.json
+tslint.json
+tsconfig.json
+browserslist
+.gitkeep
+favicon.ico
